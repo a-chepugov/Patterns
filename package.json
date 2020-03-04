@@ -1,0 +1,40 @@
+{
+	"name": "patterns",
+	"version": "1.0.0",
+	"description": "patterns",
+	"main": "index.js",
+	"directories": {},
+	"dependencies": {
+		"typescript": "^3.8.2"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.1.7",
+		"@types/mocha": "^5.2.7",
+		"chai": "^4.2.0",
+		"eslint": "^5.0.0",
+		"eslint-config-wikimedia": "^0.5.0",
+		"mocha": "^6.2.0",
+		"nodemon": "^1.19.1",
+		"ts-node": "^8.3.0",
+		"typedoc": "^0.15.0"
+	},
+	"scripts": {
+		"build": "tsc",
+		"build:watch": "tsc --watch",
+		"build:declaration": "find ./build -type f -name \"*.d.ts\" -delete && tsc --declaration",
+		"doc": "typedoc --readme README.md --name typedin --out ./doc/ --tsconfig tsconfig.json --excludePrivate --excludeNotExported --excludeExternals",
+		"test": "mocha -r ts-node/register source/**/*.test.ts",
+		"test:watch": "mocha --watch -r ts-node/register source/**/*.test.ts"
+	},
+	"repository": "git+https://github.com/a-chepugov/patterns.git",
+	"keywords": [
+		"js",
+		"patterns"
+	],
+	"author": "a.chepugov <oleksii.chepugov@ria.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/a-chepugov/helpers-js/patterns"
+	},
+	"homepage": "https://github.com/a-chepugov/patterns"
+}
